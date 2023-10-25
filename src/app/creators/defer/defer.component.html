@@ -1,0 +1,15 @@
+<p>
+  defer pozwala na wywołanie podanej funkcji dopiero wtedy, gdy nastąpi
+  subskrypcja. Dla przykładu porównanie of() z defer()
+</p>
+<button type="button" class="btn btn-primary" (click)="start_of()">
+  Start: of()
+</button>
+<button type="button" class="btn btn-primary" (click)="start_defer()">
+  Start: defer()
+</button>
+
+<p>Wywołanie funkcji przed subskrypcją</p>
+<button type="button" class="btn btn-primary" (click)="deferBeforeSubs()">
+  Start
+</button>
