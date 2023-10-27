@@ -13,10 +13,22 @@ import { DeferComponent } from './creators/defer/defer.component';
 import { FromComponent } from './creators/from/from.component';
 import { FromEventComponent } from './creators/from-event/from-event.component';
 import { GenerateComponent } from './creators/generate/generate.component';
+import { IntervalComponent } from './creators/interval/interval.component';
+import { OfComponent } from './creators/of/of.component';
+import { RangeComponent } from './creators/range/range.component';
+import { ThrowComponent } from './creators/throw/throw.component';
+import { TimerComponent } from './creators/timer/timer.component';
+import { AuditComponent } from './filters/audit/audit.component';
+import { DebounceComponent } from './filters/debounce/debounce.component';
+import { FilterComponent } from './filters/filter/filter.component';
+import { SkipComponent } from './filters/skip/skip.component';
+import { SkipUntilComponent } from './filters/skip-until/skip-until.component';
+import { SkipWhileComponent } from './filters/skip-while/skip-while.component';
+import { FormsModule } from '@angular/forms';
 
 const ROUTES: Routes = [
   {
-    path: 'subjects',
+    path: 'subject',
     children: [
       {
         path: 'subject',
@@ -33,7 +45,7 @@ const ROUTES: Routes = [
     ],
   },
   {
-    path: 'creators',
+    path: 'creator',
     children: [
       {
         path: 'ajax',
@@ -59,6 +71,55 @@ const ROUTES: Routes = [
         path: 'generate',
         component: GenerateComponent,
       },
+      {
+        path: 'interval',
+        component: IntervalComponent,
+      },
+      {
+        path: 'of',
+        component: OfComponent,
+      },
+      {
+        path: 'range',
+        component: RangeComponent,
+      },
+      {
+        path: 'throw',
+        component: ThrowComponent,
+      },
+      {
+        path: 'timer',
+        component: TimerComponent,
+      },
+    ],
+  },
+  {
+    path: 'filter',
+    children: [
+      {
+        path: 'audit',
+        component: AuditComponent,
+      },
+      {
+        path: 'debounce',
+        component: DebounceComponent,
+      },
+      {
+        path: 'filter',
+        component: FilterComponent,
+      },
+      {
+        path: 'skip',
+        component: SkipComponent,
+      },
+      {
+        path: 'skip-until',
+        component: SkipUntilComponent,
+      },
+      {
+        path: 'skip-while',
+        component: SkipWhileComponent,
+      },
     ],
   },
 ];
@@ -73,8 +134,24 @@ const ROUTES: Routes = [
     DeferComponent,
     FromComponent,
     GenerateComponent,
+    IntervalComponent,
+    OfComponent,
+    RangeComponent,
+    ThrowComponent,
+    TimerComponent,
+    AuditComponent,
+    DebounceComponent,
+    FilterComponent,
+    SkipComponent,
+    SkipUntilComponent,
+    SkipWhileComponent,
   ],
-  imports: [BrowserModule, CommonModule, RouterModule.forRoot(ROUTES)],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    RouterModule.forRoot(ROUTES),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
