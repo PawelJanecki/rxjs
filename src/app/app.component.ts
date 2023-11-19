@@ -66,12 +66,41 @@ export class AppComponent {
         { label: 'skip', route: 'filter/skip' },
         { label: 'skipUntil', route: 'filter/skip-until' },
         { label: 'skipWhile', route: 'filter/skip-while' },
-        // { label: 'take', route: 'filter/take' },
+        { label: 'take', route: 'filter/take' },
         // { label: 'takeLast', route: 'filter/takeLast' },
         // { label: 'takeUntil', route: 'filter/takeUntil' },
         // { label: 'takeWhile', route: 'filter/takeWhile' },
         // { label: 'throttle', route: 'filter/throttle' },
         // { label: 'throttleTime', route: 'filter/throttleTime' },
+      ],
+    },
+    {
+      label: 'Transformators',
+      links: [
+        { label: 'concatMap', route: 'transformation/concatMap' },
+        { label: 'map', route: 'transformation/map' },
+        { label: 'mapTo', route: 'transformation/mapTo' },
+        { label: 'mergeMap', route: 'transformation/mergeMap' },
+        { label: 'reduce', route: 'transformation/reduce' },
+        { label: 'switchMap', route: 'transformation/switchMap' },
+      ],
+    },
+    {
+      label: 'Combinators',
+      links: [
+        { label: 'concat', route: 'combination/concat' },
+        { label: 'combineAll', route: 'combination/combineAll' },
+        { label: 'combineLatest', route: 'combination/combineLatest' },
+        { label: 'merge', route: 'combination/merge' },
+        { label: 'startWith', route: 'combination/startWith' },
+        { label: 'withLatestFrom', route: 'combination/withLatestFrom' },
+      ],
+    },
+    {
+      label: 'Error handlers',
+      links: [
+        { label: 'catch', route: 'errorHandler/catch' },
+        { label: 'retry', route: 'errorHandler/retry' },
       ],
     },
   ];

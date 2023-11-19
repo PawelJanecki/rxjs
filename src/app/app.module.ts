@@ -25,6 +25,21 @@ import { SkipComponent } from './filters/skip/skip.component';
 import { SkipUntilComponent } from './filters/skip-until/skip-until.component';
 import { SkipWhileComponent } from './filters/skip-while/skip-while.component';
 import { FormsModule } from '@angular/forms';
+import { TakeComponent } from './filters/take/take.component';
+import { ConcatMapComponent } from './transformation/concat-map/concat-map.component';
+import { MapComponent } from './transformation/map/map.component';
+import { MapToComponent } from './transformation/map-to/map-to.component';
+import { MergeMapComponent } from './transformation/merge-map/merge-map.component';
+import { ReduceComponent } from './transformation/reduce/reduce.component';
+import { SwitchMapComponent } from './transformation/switch-map/switch-map.component';
+import { CombineAllComponent } from './combinators/combine-all/combine-all.component';
+import { ConcatComponent } from './combinators/concat/concat.component';
+import { MergeComponent } from './combinators/merge/merge.component';
+import { CombineLatestComponent } from './combinators/combine-latest/combine-latest.component';
+import { WithLatestFromComponent } from './combinators/with-latest-from/with-latest-from.component';
+import { StartWithComponent } from './combinators/start-with/start-with.component';
+import { CatchComponent } from './error-handlers/catch/catch.component';
+import { RetryComponent } from './error-handlers/retry/retry.component';
 
 const ROUTES: Routes = [
   {
@@ -120,6 +135,81 @@ const ROUTES: Routes = [
         path: 'skip-while',
         component: SkipWhileComponent,
       },
+      {
+        path: 'take',
+        component: TakeComponent,
+      },
+    ],
+  },
+  {
+    path: 'transformation',
+    children: [
+      {
+        path: 'concatMap',
+        component: ConcatMapComponent,
+      },
+      {
+        path: 'map',
+        component: MapComponent,
+      },
+      {
+        path: 'mapTo',
+        component: MapToComponent,
+      },
+      {
+        path: 'mergeMap',
+        component: MergeMapComponent,
+      },
+      {
+        path: 'reduce',
+        component: ReduceComponent,
+      },
+      {
+        path: 'switchMap',
+        component: SwitchMapComponent,
+      },
+    ],
+  },
+  {
+    path: 'combination',
+    children: [
+      {
+        path: 'combineAll',
+        component: CombineAllComponent,
+      },
+      {
+        path: 'combineLatest',
+        component: CombineLatestComponent,
+      },
+      {
+        path: 'concat',
+        component: ConcatComponent,
+      },
+      {
+        path: 'merge',
+        component: MergeComponent,
+      },
+      {
+        path: 'startWith',
+        component: StartWithComponent,
+      },
+      {
+        path: 'withLatestFrom',
+        component: WithLatestFromComponent,
+      },
+    ],
+  },
+  {
+    path: 'errorHandler',
+    children: [
+      {
+        path: 'catch',
+        component: CatchComponent,
+      },
+      {
+        path: 'retry',
+        component: RetryComponent,
+      },
     ],
   },
 ];
@@ -145,6 +235,18 @@ const ROUTES: Routes = [
     SkipComponent,
     SkipUntilComponent,
     SkipWhileComponent,
+    TakeComponent,
+    ConcatMapComponent,
+    MergeMapComponent,
+    ReduceComponent,
+    SwitchMapComponent,
+    CombineAllComponent,
+    ConcatComponent,
+    CombineLatestComponent,
+    WithLatestFromComponent,
+    StartWithComponent,
+    CatchComponent,
+    RetryComponent,
   ],
   imports: [
     BrowserModule,
